@@ -1,0 +1,57 @@
+#arrowAnim {
+    width: 25vw;
+    height: 25vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 5rem;
+    pointer-events: none;
+  }
+#arrowhover {
+  margin-top: 5rem;
+    font-size: x-large;
+    transition: transform ease-in-out 250ms;
+}
+#arrowhover:hover {
+  transform: scale(1.1);
+}
+#arrowhover:hover ~ #arrowAnim {
+    display: flex !important;
+}
+#arrowhover:visited {
+  color: inherit;
+}
+  
+  .arrow {
+    width: 5vw;
+    height: 5vw;
+    border: 2.5vw solid;
+    border-color: black transparent transparent black;
+    transform: rotate(225deg);
+  }
+  
+  
+  .arrowSliding {
+    position: absolute;
+    -webkit-animation: slide 1s linear infinite; 
+            animation: slide 1s linear infinite;
+  }
+  
+  .delay1 {
+    -webkit-animation-delay: 0.25s; 
+      animation-delay: 0.25s;
+  }
+  
+  @-webkit-keyframes slide {
+      0% { opacity:0; transform: translateY(-15vh); }	
+     20% { opacity:1; transform: translateY(-9vh); }	
+     80% { opacity:1; transform: translateY(9vh); }	
+    100% { opacity:0; transform: translateY(15vh); }	
+  }
+  @keyframes slide {
+      0% { opacity:0; transform: translateY(-15vh); }	
+     20% { opacity:1; transform: translateY(-9vh); }	
+     80% { opacity:1; transform: translateY(9vh); }	
+    100% { opacity:0; transform: translateY(15vh); }	
+  }

@@ -1,0 +1,105 @@
+#arrowAnim {
+  width: 25vw;
+  height: 25vh;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 5rem;
+  pointer-events: none;
+}
+
+#arrowhover {
+  margin-top: 5rem;
+  font-size: x-large;
+  -webkit-transition: -webkit-transform ease-in-out 250ms;
+  transition: -webkit-transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
+}
+
+#arrowhover:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#arrowhover:hover ~ #arrowAnim {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+#arrowhover:visited {
+  color: inherit;
+}
+
+.arrow {
+  width: 5vw;
+  height: 5vw;
+  border: 2.5vw solid;
+  border-color: black transparent transparent black;
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+.arrowSliding {
+  position: absolute;
+  -webkit-animation: slide 1s linear infinite;
+  animation: slide 1s linear infinite;
+}
+
+.delay1 {
+  -webkit-animation-delay: 0.25s;
+  animation-delay: 0.25s;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-15vh);
+            transform: translateY(-15vh);
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(-9vh);
+            transform: translateY(-9vh);
+  }
+  80% {
+    opacity: 1;
+    -webkit-transform: translateY(9vh);
+            transform: translateY(9vh);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(15vh);
+            transform: translateY(15vh);
+  }
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-15vh);
+            transform: translateY(-15vh);
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(-9vh);
+            transform: translateY(-9vh);
+  }
+  80% {
+    opacity: 1;
+    -webkit-transform: translateY(9vh);
+            transform: translateY(9vh);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(15vh);
+            transform: translateY(15vh);
+  }
+}
+/*# sourceMappingURL=arrow.css.map */

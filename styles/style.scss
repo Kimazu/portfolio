@@ -1,0 +1,325 @@
+$color1: #020202;
+$color2: #f5d10d;
+$color3: #141417;
+$color4: #e3a765;
+$color5: #f2efe2;
+$color6: #fe0432;
+$color7: #702331;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Overpass', sans-serif;
+    scrollbar-width: thin;
+    scrollbar-color: $color1 $color3;
+}
+*::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: $color3;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: $color1;
+    border-radius: 20px;
+    border: 3px solid $color3;
+  }
+  html {
+      scroll-behavior: smooth;
+  }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100&display=swap');
+
+
+
+body {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/bgimage.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    color: $color5;
+}
+.noselect {
+    user-select: none;
+}
+.transparentbg {
+    width: 100%;
+    height: 20vh;
+    background-color: transparent;
+}
+.lang {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    &__selected {
+        cursor: pointer;
+        label {
+            display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+    }
+    
+}
+.logo {
+    color: $color4;
+    display: block;
+    padding: 1rem;
+}
+.toggle-button {
+    display: none;
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    text-align: center;
+}
+.linkbutton {
+    border-radius: 1.5em;
+    background: $color6;
+    padding: 0.5em;
+    //box-shadow: 0 10px 1em rgba(68, 74, 81, 0.3);
+}
+.active {
+    display: flex !important;
+}
+.navbar {
+    z-index: 99;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    //background: $color1;
+    //box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    
+    &__ul {
+        display: flex;
+    }
+    &__li {
+        list-style: none;
+        margin: 5px;
+    }
+    &__a:hover {
+        transition: all 0.3s ease;
+        color: $color5;
+    }
+    &__a {
+        color: $color4;
+        display: block;
+        padding: 1rem;
+    }
+}
+.home {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+    padding: 0 5em;
+}
+.aboutme {
+    display: flex;
+    min-height: 60vh;
+    width: 100%;
+    background: $color3;
+    padding: 4em;
+    &__wrapper {
+        justify-content: space-between;
+    }
+}
+.hoverimage:hover .displayimage {
+    display: block;
+}
+
+
+.displayimage {
+    display: none;
+    transform: translateY(-100%);
+    padding: 10px;
+    position: absolute;
+    z-index: 1000;
+    width:60vw;
+    height:60vh;
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.hoverimage {
+    margin: 2em 2em;
+    display: block;
+}
+.works {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $color3;
+    padding: 4em;
+    a {
+        transition: all 0.3s ease-in-out;
+    }
+    a:link, a:visited {
+        color: $color5;
+    }
+    a:hover, a:active {
+        padding: 1em;
+        background-color: $color6;
+      }
+}
+.overlay {
+    position: fixed;
+    z-index: 1;
+    background-color: black;
+    opacity: 0.7;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+}
+.title {
+    background: linear-gradient(to right, $color6, $color7);
+    width: 100%;
+    height: 10vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;  
+    font-size: 30px;
+}
+.title span {
+    border-bottom:2px solid $color5;
+}
+#profile {
+    height: 100%;
+    width: 25vw;
+}
+.homebtn {
+    display: none;
+    position: fixed;
+    height: 45px;
+    width: 45px;
+    font-size: 3em;
+    text-align: center;
+    right: 15px;
+    bottom: 15px;
+    color: $color6;
+    background: transparent;
+    border: none;
+    z-index: 99;
+}
+.footer {
+    width: 100%;
+    height: 5vh;
+    background-color: black;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+@media (max-width: 2000px) {
+    #arrowAnim {
+        bottom: 4rem;
+    }
+}
+@media (max-width: 1200px) {
+    .aboutme {
+        min-height: 50vh;
+    }
+    .works {
+        flex-direction: column;
+    }
+    #slider {
+        margin-top: 5em;
+        height: 75vh !important;
+        width: 75vw !important;
+    }
+    #arrowAnim {
+        bottom: 3rem;
+    }
+}
+@media (max-width: 900px) {
+    .aboutme {
+        min-height: 40vh;
+    }
+    #arrowAnim {
+        bottom: 2rem;
+    }
+    .arrow {
+        width: 10vw;
+        height: 10vw;
+        border: 5vw solid;
+        border-color: black transparent transparent black;
+    transform: rotate(225deg);
+    }
+}
+@media (max-width: 600px) {
+    .aboutme {
+        flex-direction: column-reverse;
+        
+    }
+    
+    #slider {
+        width: 100vw !important;
+    }
+    #profile {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    .toggle-button {
+        display: flex;
+
+    }
+    .home {
+        h1 {
+            font-size: 30px;
+        }
+    }
+    
+    .active {
+        display: flex !important;
+    }
+    #arrowAnim {
+        bottom: 1rem;
+    }
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        background: $color1;
+        &__ul {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            
+        }
+        &__li {
+            text-align: center;
+            font-size: 200%;
+        }
+    }
+    
+}
+@media (max-width: 400px) {
+    .home {
+        font-size: 10px;
+    }
+    #arrowAnim {
+        bottom: 0.5rem;
+    }
+}

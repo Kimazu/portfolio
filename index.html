@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/arrow.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/carousel.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="navbar">
+        <div class="logo">ttfgyuri</div>
+        <a class="toggle-button" href="javascript:void(0)"><i class="fas fa-bars fa-lg"></i></a>
+            <ul class="navbar__ul">
+                <li class="navbar__li"><a id="homelink" class="navbar__a" href="#home">Home</a></li>
+                <li class="navbar__li"><a id="aboutmelink" class="navbar__a" href="#aboutme">About me</a></li>
+                <li class="navbar__li"><a id="workslink" class="navbar__a" href="#works">Works</a></li>
+               
+            </ul>
+            <div class="lang">
+                <div class="lang__selected">
+                    <label style="cursor: pointer;" for="langcheckbox"><input style="display: none;" id="langcheckbox" type="checkbox" onchange="toggleLanguage(this)" />
+                        <img id="flag" src="https://www.countryflags.io/us/flat/32.png">
+                        <span id="RadioOne">ENG</span>
+                    </label>
+                </div>
+            </div>
+    </div>
+    <div class="overlay"></div>
+    
+    <div id="home" class="home">
+        <h1 id="greet" class="noselect linkbutton">Hello! My name is György Tóthfalusi and I am a Web Developer.</h1>
+        <a id="arrowhover" class="linkbutton" href="#aboutme">Click here for more details</a>
+        <div id="arrowAnim">
+            <div class="arrowSliding">
+              <div class="arrow"></div>
+            </div>
+            <div class="arrowSliding delay1">
+              <div class="arrow"></div>
+            </div>
+          </div>
+    </div>
+    <section id="aboutme" class="title"><span class="noselect">About me</span></section>
+    <div class="aboutme">
+        <div><p style="padding: 1em;" id="aboutmetext">I graduated at the University of Debrecen in English Studies, however I have decided to not pursue that path. Instead, I have decided to look towards the internet and found webdeveloping and coding to be very intriguing. Therefore I have decided to become a self-taught developer. In my work and design, I strive for simplicity and efficiency; values I find the most important. My skills include:</p>
+            <ul style="margin-left: 1em;">
+                <li>HTML</li>
+                <li>CSS/SCSS</li>
+                <li>Javascript</li>
+                <li>NodeJS</li>
+                <li>ReactJS</li>
+                <li>PHP</li>
+            </ul>
+        </div>
+        
+        <img id="profile" src="images/profil.jpg" alt="">
+</div>
+  
+    </div>
+<section id="works" class="title"><span class="noselect">Some of my works</span></section>
+
+
+
+    <div class="works">
+        <div>
+            <a href="https://anitaharmoniamasszazs.hu/" class="hoverimage">Anita harmónia masszázs
+                <span class="displayimage"><img src="images/kép1.PNG"></span>
+            </a>
+            
+            <a href="" class="hoverimage">Second Link
+                <span class="displayimage"><img src="images/kép2.PNG"></span>
+            </a>
+            <a href="" class="hoverimage">Third Link
+                <span class="displayimage"><img src="images/kép3.PNG"></span>
+            </a>
+        </div>
+        
+        <div id="slider">
+            <figure>
+                <img src="images/kép1.PNG">
+                <img src="images/kép2.PNG">
+                <img src="images/kép3.PNG">
+                <img src="images/kép2.PNG">
+                <img src="images/kép1.PNG">
+            </figure>
+        </div>
+    </div>
+
+    <footer id="footer" class="footer noselect">
+        created by: György Tóthfalusi 
+    </footer>
+    
+    <button class="homebtn" onclick="topFunction()" title="Top"><i class="far fa-arrow-alt-circle-up"></i></i></button>
+    
+    <script src="myjs.js"></script>
+    <script src="lang.js"></script>
+</body>
+</html>
