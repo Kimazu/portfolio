@@ -23,7 +23,7 @@ var localization = {
         {id:"greet", text:"Hello! Tóthfalusi Györgynek hívnak és webfejlesztő vagyok."},
         {id:"arrowhover", text:"Részletekért kattints ide"},
         {id:"aboutme", text:"Rólam"},
-        {id:"aboutmetext", text:"I graduated at the University of Debrecen in English Studies, however I have decided to not pursue that path. Instead, I have decided to look towards the internet and found webdeveloping and coding to be very intriguing. Therefore I have decided to become a self-taught developer. In my work and design, I strive for simplicity and efficiency; values I find the most important. My skills include:"},
+        {id:"aboutmetext", text:"A Debreceni Egyetemen végeztem Anglisztika szakon, azonban úgy döntöttem, hogy nem ezt a karriert folytatom. Ehelyett az internetben látom a jövőt és a programozásban. Ezért úgy döntöttem, hogy saját magamat kiképzem fejlesztővé. A munkámban az egyszerűségre és hatékonyságra törekszem. Általam használt eszközök:"},
         {id:"works", text:"Néhány munkám"},
         {id:"footer", text:"készítette: Tóthfalusi György"},
         {id:"flag", src:"https://www.countryflags.io/hu/flat/32.png"},
